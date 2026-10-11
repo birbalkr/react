@@ -12,6 +12,7 @@ export const useAuth = () => {
         reset,
         formState: { errors },
     } = useForm();
+
     const registerFrom = (data) => {
         let arr = [...registerUsers, data];
         setRegisterUsers(arr);
@@ -19,6 +20,7 @@ export const useAuth = () => {
         console.log(data);
 
     };
+    
     const loginForm = (data) => {
         let user = registerUsers.find((user) => user.email === data.email && user.password === data.password);
 

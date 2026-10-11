@@ -14,15 +14,10 @@ const AppRoutes = () => {
 
   const hydrated = () => {
     let user = JSON.parse(localStorage.getItem("user"));
-
     if (!user) {
-      // alert("Please login first");
       return;
     }
-
-
     dispatch(addUser(user));
-
   }
   useEffect(() => {
     hydrated()
